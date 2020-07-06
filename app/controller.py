@@ -3,10 +3,9 @@ from rest_framework.authtoken.models import Token
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-from rest_framework.generics import RetrieveAPIView, ListAPIView, CreateAPIView, RetrieveUpdateDestroyAPIView
-from rest_framework import mixins
+from rest_framework.generics import ListAPIView, CreateAPIView, RetrieveUpdateDestroyAPIView
 from app.serializers import UserSerializer
-from app.models import Offer
+from app.models import Offer, User
 from app.serializers import OfferSerializer
 
 

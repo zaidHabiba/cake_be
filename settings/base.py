@@ -8,6 +8,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+AUTH_USER_MODEL = 'app.User'
+
 CORS_ORIGIN_WHITELIST = (
     'http://google.com',
     'http://localhost:3000',
