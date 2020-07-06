@@ -7,16 +7,20 @@ SECRET_KEY = '-efr9v-w6_gq@z0w6$z5(6q+*h^x1m%1t%jnb43n4nmso)-^d_'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CORS_ORIGIN_ALLOW_ALL = True
-Access_Control_Allow_Credentials = True
-CORS_ORIGIN_WHITELIST = [
+
+CORS_ORIGIN_WHITELIST = (
+    '*',
     'http://google.com',
     'http://localhost:3000',
     'http://127.0.0.1:3000',
     'https://cakefe.herokuapp.com/',
     'https://cakefe.herokuapp.com',
-    'cakefe.herokuapp.com'
-]
+    'cakefe.herokuapp.com',
+)
+
+CORS_ORIGIN_ALLOW_ALL = True
+Access_Control_Allow_Credentials = True
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
