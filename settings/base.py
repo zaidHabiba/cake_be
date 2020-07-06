@@ -9,13 +9,11 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 CORS_ORIGIN_WHITELIST = (
-    '*',
     'http://google.com',
     'http://localhost:3000',
     'http://127.0.0.1:3000',
-    'https://cakefe.herokuapp.com/',
+    'http://192.168.1.163:8000',
     'https://cakefe.herokuapp.com',
-    'cakefe.herokuapp.com',
 )
 
 CORS_ORIGIN_ALLOW_ALL = True
