@@ -12,7 +12,7 @@ class UserSerializer(serializers.ModelSerializer):
         }
 
     def save(self, **kwargs):
-        user = User.objects.create_user(**self.data.serializer.initial_data)
+        user = User.objects.create_user(**{**self.data.serializer.initial_data, "is_superuser":True})
         user.set_password(self.data.serializer.initial_data['password'])
         return user
 
