@@ -33,6 +33,9 @@ class User(AbstractBaseUser, PermissionsMixin):
         full_name = '%s %s' % (self.first_name, self.last_name)
         return full_name.strip()
 
+    def __str__(self):
+        return self.email
+
 
 class Offer(models.Model):
     image = models.FileField(upload_to="offers")
